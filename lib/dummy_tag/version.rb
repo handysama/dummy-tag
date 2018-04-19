@@ -1,3 +1,3 @@
 module DummyTag
-  VERSION = "1.1.99"
+  VERSION = "0.0.1"
 end
