@@ -5,6 +5,10 @@
       command: printenv
     - service: codeship_example
       command: ls
+    - service: codeship_example
+      command: git tag -a "v1.0.1" -m "tag from codeship pro"
+    - service: codeship_example
+      command: git push origin --tags
 - name: example_tagged_step
   tag: master
   service: codeship_example
