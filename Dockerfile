@@ -18,9 +18,8 @@ ENV PACKAGES bash \
     libpq-dev \
     libpython-dev \
     nodejs \
-    postgresql-client \
     python-pip \
-    redis-tools
+    openssh-server
 
 # postgres 9.5 currently in testing only in debian repo
 # see https://packages.debian.org/search?suite=default&section=all&arch=any&searchon=names&keywords=postgresql-client

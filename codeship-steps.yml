@@ -1,10 +1,14 @@
-- type: parallel
+- type: serial
   name: example_parallel_step
   steps:
     - service: codeship_example
       command: printenv
     - service: codeship_example
       command: ls
+    - service: codeship_example
+      command: git config --global user.email "CSP@codeeeshipp.com"
+    - service: codeship_example
+      command: git config --global user.name "Codeship Pro"
     - service: codeship_example
       command: git tag -a v1.0.1 -m "tag from codeship pro"
     - service: codeship_example
