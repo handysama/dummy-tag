@@ -1,5 +1,7 @@
 FROM ruby:2.4-slim
 
+ENV RAILS_ENV=docker-dev
+
 # build-essential required for make/fcc/g++ (mostly for GEM native extensions)
 # curl is added so we can use the `curl` command in our scripts
 # gettext required for envsubst command
@@ -39,3 +41,5 @@ WORKDIR /usr/src/app
 COPY . .
 
 CMD ["printenv"]
+
+RUN git config credential.helper
