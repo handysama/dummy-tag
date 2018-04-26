@@ -35,6 +35,7 @@ RUN git remote set-url origin git@github.com:handysama/dummy-tag.git
 
 RUN git tag -a v1.0.1 -m "tag from codeship"
 RUN git tag
-RUN git push origin --tags
+# RUN git push origin --tags
 
-CMD ["printenv"]
+CMD ["git push origin --tags"]
+# CMD ["printenv"]

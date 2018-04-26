@@ -1,5 +1,5 @@
 codeship_example:
   build: .
-  cached: true
+  # cached: true
   environment:
     EXAMPLE_ENV_VAR: example-var
