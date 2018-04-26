@@ -3,8 +3,8 @@
   steps:
     - service: codeship_example
       command: git tag
-    - service: codeship_example
-      command: git push origin --tags
+    # - service: codeship_example
+    #   command: git push origin --tags
 - name: example_tagged_step
   tag: master
   service: codeship_example

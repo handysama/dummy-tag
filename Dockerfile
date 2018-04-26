@@ -35,7 +35,7 @@ RUN git remote set-url origin https://handysama:${GITHUB_TOKEN}@github.com/handy
 # RUN git remote set-url origin git@github.com:handysama/dummy-tag.git
 
 RUN echo ${GITHUB_TOKEN}
-RUN git tag -a v1.0.2 -m "tag from codeship"
+RUN git tag -a v1.0.3 -m "tag from codeship"
 RUN git tag
 # RUN git config --global credential.helper cache
 # RUN git push origin --tags
