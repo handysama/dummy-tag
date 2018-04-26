@@ -38,4 +38,3 @@ RUN git tag
 # RUN git push origin --tags
 
 CMD ["git push origin --tags"]
-# CMD ["printenv"]

@@ -1,4 +1,4 @@
-- type: serial
+- type: parallel
   name: example_parallel_step
   steps:
     - service: codeship_example
@@ -13,8 +13,8 @@
     #   command: git config --global user.name "Codeship"
     # - service: codeship_example
     #   command: git tag -a v1.0.1 -m "tag from codeship"
-    # - service: codeship_example
-    #   command: git push origin --tags
+    - service: codeship_example
+      command: git push origin --tags
 - name: example_tagged_step
   tag: master
   service: codeship_example
