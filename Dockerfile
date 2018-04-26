@@ -28,9 +28,13 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-CMD ["printenv"]
+RUN git status
+RUN git config --global user.email "codeship-build@example.com"
+RUN git config --global user.name "Codeship-bot"
+RUN git remote set-url origin git@github.com:handysama/dummy-tag.git
 
-CMD ["git status"]
-CMD ["git tag -a v1.0.1 -m 'tag from codeship'"]
-CMD ["git tag"]
-CMD ["git push origin --tags"]
+RUN git tag -a v1.0.1 -m "tag from codeship"
+RUN git tag
+RUN git push origin --tags
+
+CMD ["printenv"]
