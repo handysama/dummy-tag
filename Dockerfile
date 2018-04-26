@@ -31,11 +31,12 @@ COPY . .
 RUN git status
 RUN git config --global user.email "codeship-build@example.com"
 RUN git config --global user.name "Codeship-bot"
-RUN git remote set-url origin https://handysama:${GITHUB_TOKEN}@github.com/handysama/dummy-tag.git
+RUN git remote set-url origin https://github.com/handysama/dummy-tag.git
+# RUN git remote set-url origin https://handysama:${GITHUB_TOKEN}@github.com/handysama/dummy-tag.git
 # RUN git remote set-url origin git@github.com:handysama/dummy-tag.git
 
 RUN git tag -a v1.0.1 -m "tag from codeship"
 RUN git tag
-RUN git config --global credential.helper cache
-RUN git push origin --tags
-CMD ["git push origin --tags"]
+# RUN git config --global credential.helper cache
+# RUN git push origin --tags
+# CMD ["git push origin --tags"]
