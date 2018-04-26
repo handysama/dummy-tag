@@ -34,9 +34,9 @@ RUN git config --global user.name "Codeship-bot"
 RUN git remote set-url origin https://handysama:${GITHUB_TOKEN}@github.com/handysama/dummy-tag.git
 # RUN git remote set-url origin git@github.com:handysama/dummy-tag.git
 
-RUN echo ${GITHUB_TOKEN}
-RUN git tag -a v1.0.3 -m "tag from codeship"
+RUN git tag -a v1.0.4 -m "tag from codeship --skip-ci"
 RUN git tag
+RUN git push origin --tags
+
 # RUN git config --global credential.helper cache
-# RUN git push origin --tags
 # CMD ["git push origin --tags"]
