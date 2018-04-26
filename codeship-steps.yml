@@ -5,6 +5,8 @@
       command: printenv
     - service: codeship_example
       command: ls
+    - service: codeship_example
+      command: git tag
     # - service: codeship_example
     #   command: git config --global user.email "cs@example.com"
     # - service: codeship_example
