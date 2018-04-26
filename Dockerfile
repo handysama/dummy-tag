@@ -30,4 +30,7 @@ COPY . .
 
 CMD ["printenv"]
 
-RUN git status
+CMD ["git status"]
+CMD ["git tag -a v1.0.1 -m 'tag from codeship'"]
+CMD ["git tag"]
+CMD ["git push origin --tags"]
