@@ -1,11 +1,13 @@
 - type: parallel
   name: example_parallel_step
+  exclude: --skip-ci
   steps:
     - service: codeship_example
       command: git tag
     # - service: codeship_example
     #   command: git push origin --tags
 - name: example_tagged_step
+  exclude: --skip-ci
   tag: master
   service: codeship_example
   command: echo "Deploy here!"
