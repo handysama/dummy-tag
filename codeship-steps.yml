@@ -1,5 +1,6 @@
 - type: parallel
   name: example_parallel_step
+  tag: master
   exclude: ^(v)
   steps:
     - service: codeship_example
