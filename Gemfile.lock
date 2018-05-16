@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dummy_tag (0.0.7)
+    dummy_tag (0.0.8)
 
 GEM
   remote: https://rubygems.org/
