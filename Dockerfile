@@ -3,22 +3,22 @@ FROM ruby:2.4-slim
 ARG GEM_NAME
 
 ENV RAILS_ENV=docker-dev
-ENV PACKAGES bash \
-    build-essential \
-    curl \
-    gettext \
-    git \
-    libcurl4-openssl-dev \
-    libpython-dev \
-    openssh-server
+# ENV PACKAGES bash \
+#     build-essential \
+#     curl \
+#     gettext \
+#     git \
+#     libcurl4-openssl-dev \
+#     libpython-dev \
+#     openssh-server
 
-RUN apt-get update && \
-    apt-get install --no-install-recommends -y wget && \
-    echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' >> /etc/apt/sources.list && \
-    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && \
-    apt-get update && \
-    apt-get install --no-install-recommends -y $PACKAGES && \
-    rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && \
+#     apt-get install --no-install-recommends -y wget && \
+#     echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' >> /etc/apt/sources.list && \
+#     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && \
+#     apt-get update && \
+#     apt-get install --no-install-recommends -y $PACKAGES && \
+#     rm -rf /var/lib/apt/lists/*
 
 RUN gem install bundler
 
