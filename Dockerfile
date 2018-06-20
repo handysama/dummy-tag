@@ -1,7 +1,6 @@
 FROM ruby:2.4-slim
 
 ARG GEM_NAME
-
 ENV RAILS_ENV=docker-dev
 # ENV PACKAGES bash \
 #     build-essential \
@@ -36,11 +35,11 @@ RUN git config --global user.name "Codeship-Bot"
 RUN git remote set-url origin https://handysama:${GITHUB_TOKEN}@github.com/handysama/dummy-tag.git
 # RUN git remote set-url origin git@github.com:handysama/dummy-tag.git
 
-RUN echo GEM_NAME
+RUN echo "$GEM_NAME"
 
-RUN git tag -a v1.0.9 -m "[skip ci]"
-RUN git tag
-RUN git push origin --tags
+# RUN git tag -a v1.0.9 -m "[skip ci]"
+# RUN git tag
+# RUN git push origin --tags
 
 # RUN git config --global credential.helper cache
 # CMD ["git push origin --tags"]
