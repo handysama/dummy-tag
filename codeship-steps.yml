@@ -2,6 +2,8 @@
   name: example_parallel_step
   tag: master
   steps:
+    - name: codeship_example
+      command: echo $GEM_NAME
     - service: codeship_example
       command: git tag
 - name: example_tagged_step
