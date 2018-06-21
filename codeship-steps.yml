@@ -2,7 +2,7 @@
   name: example_parallel_step
   tag: master
   steps:
-    - name: codeship_example
+    - service: codeship_example
       command: echo "{{ .RepoName }}"
     - service: codeship_example
       command: git tag
