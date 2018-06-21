@@ -3,7 +3,7 @@
   tag: master
   steps:
     - name: codeship_example
-      command: echo $GEM_NAME
+      command: echo "{{ .RepoName }}"
     - service: codeship_example
       command: git tag
 - name: example_tagged_step
