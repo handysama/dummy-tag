@@ -13,8 +13,6 @@ ENV PACKAGES bash \
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y wget && \
-    echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' >> /etc/apt/sources.list && \
-    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - && \
     apt-get update && \
     apt-get install --no-install-recommends -y $PACKAGES && \
     rm -rf /var/lib/apt/lists/*
