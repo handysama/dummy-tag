@@ -4,7 +4,7 @@ codeship_example:
     encrypted_args_file: secret.encrypted
     args:
       GEM_NAME: "{{ .RepoName }}"
-  # cached: true
+  cached: true
   environment:
     EXAMPLE_ENV_VAR: example-var
 
