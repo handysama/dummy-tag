@@ -3,8 +3,9 @@ codeship_example:
     dockerfile: Dockerfile
     # encrypted_args_file: secret.encrypted
     args:
-      GEM_NAME: "{{ .RepoName }}"
+      GEM_NAME: "{{.RepoName}}"
   cached: true
   environment:
     EXAMPLE_ENV_VAR: example-var
+    GEM_NAME: "{{.RepoName}}"
 
