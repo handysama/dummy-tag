@@ -5,7 +5,7 @@
     - service: codeship_example
       command: echo "GEM_NAME ${GEM_NAME}"
     - service: codeship_example
-      command: echo "{{ .RepoName }}"
+      command: {{ .RepoName }}
     - service: codeship_example
       command: git tag
 - name: example_tagged_step
