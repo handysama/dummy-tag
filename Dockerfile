@@ -32,6 +32,7 @@ ARG GITHUB_TOKEN
 # RUN git remote set-url origin https://handysama:${GITHUB_TOKEN}@github.com/handysama/dummy-tag.git
 # # RUN git remote set-url origin git@github.com:handysama/dummy-tag.git
 
+RUN echo "test echo here"
 RUN echo GEM_NAME
 
 # RUN git tag -a v1.0.9 -m "[skip ci]"
