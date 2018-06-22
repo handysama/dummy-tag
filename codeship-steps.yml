@@ -8,14 +8,14 @@
       command: echo "$CI_REPO_NAME"
     - service: codeship_example
       command: echo "$EXAMPLE_ENV_VAR"
-    # - service: codeship_example
-    #   command: echo "${EXAMPLE_ENV_VAR}"
     - service: codeship_example
       command: echo "{{.RepoName}}"
     - service: codeship_example
       command: echo "{{.CommitID}}"
     - service: codeship_example
       command: git tag
+    - service: codeship_example
+      command: test_echo.sh
 - name: example_tagged_step
   tag: master
   service: codeship_example
