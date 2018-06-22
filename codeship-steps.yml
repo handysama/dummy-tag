@@ -3,13 +3,14 @@
   tag: master
   steps:
     - service: codeship_example
-      command: echo "GEM_NAME $GEM_NAME"
-    - service: codeship_example
-      command: echo "$EXAMPLE_ENV_VAR"
-    - service: codeship_example
-      command: echo "{{.RepoName}}"
-    - service: codeship_example
-      command: git tag
+      command:
+      - echo "$GEM_NAME"
+      - echo "${GEM_NAME}"
+      - echo "$EXAMPLE_ENV_VAR"
+      - echo "${EXAMPLE_ENV_VAR}"
+      - echo "{{.RepoName}}"
+      - echo "{{.CommitID}}"
+      - git tag
 - name: example_tagged_step
   tag: master
   service: codeship_example
