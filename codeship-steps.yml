@@ -1,15 +1,21 @@
 - type: parallel
   name: example_parallel_step
-  service: codeship_example
   tag: master
   steps:
-  - command: echo "$GEM_NAME"
-  - command: echo "${GEM_NAME}"
-  - command: echo "$EXAMPLE_ENV_VAR"
-  - command: echo "${EXAMPLE_ENV_VAR}"
-  - command: echo "{{.RepoName}}"
-  - command: echo "{{.CommitID}}"
-  - command: git tag
+    - service: codeship_example
+      command: echo "$GEM_NAME"
+    - service: codeship_example
+      command: echo "${GEM_NAME}"
+    - service: codeship_example
+      command: echo "$EXAMPLE_ENV_VAR"
+    - service: codeship_example
+      command: echo "${EXAMPLE_ENV_VAR}"
+    - service: codeship_example
+      command: echo "{{.RepoName}}"
+    - service: codeship_example
+      command: echo "{{.CommitID}}"
+    - service: codeship_example
+      command: git tag
 - name: example_tagged_step
   tag: master
   service: codeship_example
