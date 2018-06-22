@@ -26,6 +26,7 @@ RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 
 COPY . .
+COPY test_echo.sh test_echo.sh
 
 # RUN git config --global user.email "codeship-build@example.com"
 # RUN git config --global user.name "Codeship-Bot"
