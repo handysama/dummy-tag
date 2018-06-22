@@ -5,11 +5,11 @@
     - service: codeship_example
       command: echo "$GEM_NAME"
     - service: codeship_example
-      command: echo "${GEM_NAME}"
+      command: echo "$CI_REPO_NAME"
     - service: codeship_example
       command: echo "$EXAMPLE_ENV_VAR"
-    - service: codeship_example
-      command: echo "${EXAMPLE_ENV_VAR}"
+    # - service: codeship_example
+    #   command: echo "${EXAMPLE_ENV_VAR}"
     - service: codeship_example
       command: echo "{{.RepoName}}"
     - service: codeship_example
