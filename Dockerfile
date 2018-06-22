@@ -10,6 +10,7 @@ ENV PACKAGES bash \
     libcurl4-openssl-dev \
     libpython-dev \
     openssh-server
+ENV GEM_NAME_1=GEM_NAME
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y wget && \
