@@ -1,6 +1,8 @@
 FROM ruby:2.4-slim
 
 ARG GEM_NAME
+# ARG GITHUB_TOKEN
+
 ENV RAILS_ENV=docker-dev
 ENV PACKAGES bash \
     build-essential \
@@ -24,8 +26,6 @@ RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 
 COPY . .
-
-ARG GITHUB_TOKEN
 
 # RUN git config --global user.email "codeship-build@example.com"
 # RUN git config --global user.name "Codeship-Bot"

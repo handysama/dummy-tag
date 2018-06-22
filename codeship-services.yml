@@ -1,7 +1,7 @@
 codeship_example:
   build:
     dockerfile: Dockerfile
-    encrypted_args_file: secret.encrypted
+    # encrypted_args_file: secret.encrypted
     args:
       GEM_NAME: "{{ .RepoName }}"
   cached: true
