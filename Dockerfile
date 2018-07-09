@@ -12,7 +12,6 @@ ENV PACKAGES bash \
     libcurl4-openssl-dev \
     libpython-dev \
     openssh-server
-ENV GEM_NAME_1=GEM_NAME
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y wget && \
@@ -35,7 +34,10 @@ COPY test_echo.sh test_echo.sh
 # # RUN git remote set-url origin git@github.com:handysama/dummy-tag.git
 
 RUN echo "test echo here"
-RUN echo GEM_NAME
+RUN echo $EXAMPLE_ENV_VAR
+RUN echo $GEM_NAME
+RUN echo $CI_REPO_NAME
+RUN echo $CI_COMMIT_ID
 
 # RUN git tag -a v1.0.9 -m "[skip ci]"
 # RUN git tag

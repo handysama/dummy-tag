@@ -1,4 +1,4 @@
-codeship_example:
+codeship-example:
   build:
     dockerfile: Dockerfile
     # encrypted_args_file: secret.encrypted
@@ -6,5 +6,4 @@ codeship_example:
       GEM_NAME: "{{.RepoName}}"
   cached: false
   environment:
-    - EXAMPLE_ENV_VAR=example-var
-    - GEM_NAME="{{.RepoName}}"
+    EXAMPLE_ENV_VAR: example-var
